@@ -370,7 +370,7 @@ plt.show()
 
 """# XGBoost Classifier"""
 
-!pip install xgboost --quiet
+#!pip install xgboost --quiet
 
 import xgboost as xgb
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
@@ -558,3 +558,6 @@ if st.button("Predict Popularity"):
         st.success(f"✅ This hotel is likely to be **popular** with {prediction_proba:.2f}% confidence.")
     else:
         st.warning(f"⚠️ This hotel is **less likely to be popular**, confidence: {100 - prediction_proba:.2f}%.")
+
+import joblib
+joblib.dump(feature_names, "feature_names.pkl")
