@@ -17,7 +17,7 @@ import seaborn as sns
 pd.set_option('display.max_columns', None)
 sns.set(style='whitegrid')
 
-df = pd.read_csv('data/data_rdd.csv', encoding='ISO-8859-1')
+df = pd.read_csv('data_rdd.csv', encoding='ISO-8859-1')
 
 # === STEP 3: Display First Few Rows ===
 df.head()
