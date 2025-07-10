@@ -10,9 +10,6 @@ feature_names = joblib.load("feature_names.pkl")  # Ensure this matches training
 st.title("Hotel Popularity Prediction")
 st.markdown("Enter hotel details to predict its popularity:")
 
-scaler = joblib.load("scaler.pkl")
-input_array_scaled = scaler.transform(input_array)
-prediction = model.predict(input_array_scaled)[0]
 
 # Input fields for user
 score_adjusted = st.number_input("Score Adjusted (e.g., 4.3)", min_value=1.0, max_value=5.0, value=4.5)
