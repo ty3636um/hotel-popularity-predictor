@@ -37,6 +37,7 @@ input_array = np.array(input_data).reshape(1, -1)
 if st.button("Predict Popularity"):
     prediction = model.predict(input_array)[0]
     prob = model.predict_proba(input_array)[0][1] * 100
+    prediction = 1 if prob >= 0.6 else 0  # Change threshold from 0.5 to 0.6
     if prediction == 1:
         st.success(f"✅ This hotel is likely to be **popular** ({prob:.2f}% confidence).")
     else:
